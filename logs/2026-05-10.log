@@ -1,0 +1,258 @@
+============================================================
+   SISTEMA: Software FJ — Gestión Integral
+   Clientes, Servicios y Reservas
+============================================================
+10/05/2026 03:00:23 PM  [INFO   ]  Sistema iniciado: 10/05/2026 15:00:23
+
+============================================================
+   INICIO DEL SISTEMA: Software FJ — Simulaciones
+============================================================
+10/05/2026 03:00:23 PM  [INFO   ]  START: Simulación 1 — Registrar cliente válido
+10/05/2026 03:00:23 PM  [INFO   ]  FINISH: Operación --- Registrar cliente: Cliente registrado exitosamente.
+10/05/2026 03:00:23 PM  [INFO   ]    Resultado: Cliente('Laura Gómez', laura.gomez@email.com)
+
+10/05/2026 03:00:23 PM  [INFO   ]  START: Simulación 2 — Cliente con email inválido
+10/05/2026 03:00:23 PM  [WARNING]    Error capturado correctamente: [ERR_CLIENTE_INVALIDO] Datos del cliente inválidos (Campo: 'email'): 'correo-sin-arroba' no tiene formato válido (ej: usuario@dominio.com).
+10/05/2026 03:00:23 PM  [INFO   ]    Bloque finally: validación de email completada.
+
+10/05/2026 03:00:23 PM  [INFO   ]  START: Simulación 3 — Cliente con identificación corta
+10/05/2026 03:00:23 PM  [WARNING]    Error capturado: [ERR_CLIENTE_INVALIDO] Datos del cliente inválidos (Campo: 'identificacion'): '123' debe tener al menos 5 caracteres.
+
+10/05/2026 03:00:23 PM  [INFO   ]  START: Simulación 4 — Cliente duplicado
+10/05/2026 03:00:23 PM  [INFO   ]  FINISH: Operación --- Registrar cliente: Cliente registrado exitosamente.
+10/05/2026 03:00:23 PM  [WARNING]    Duplicado detectado correctamente: [ERR_CLIENTE_DUPLICADO] Ya existe un cliente registrado con la identificación '99887766'.
+
+10/05/2026 03:00:23 PM  [INFO   ]  START: Simulación 5 — Registrar sala válida
+10/05/2026 03:00:23 PM  [INFO   ]  FINISH: Servicio registrado exitosamente: Sala Innovación
+10/05/2026 03:00:23 PM  [INFO   ]    Resultado: [SRV-001] Sala Innovación — $80,000/hora — Disponible
+
+10/05/2026 03:00:23 PM  [INFO   ]  START: Simulación 6 — Registrar equipo válido
+10/05/2026 03:00:23 PM  [INFO   ]  FINISH: Servicio registrado exitosamente: Laptop Dell XPS
+10/05/2026 03:00:23 PM  [INFO   ]    Resultado: [SRV-002] Laptop Dell XPS — $25,000/hora — Disponible
+
+10/05/2026 03:00:23 PM  [INFO   ]  START: Simulación 7 — Registrar asesoría válida
+10/05/2026 03:00:23 PM  [INFO   ]  FINISH: Servicio registrado exitosamente: Consultoría en Ciberseguridad
+10/05/2026 03:00:23 PM  [INFO   ]    Resultado: [SRV-003] Consultoría en Ciberseguridad — $120,000/hora — Disponible
+
+10/05/2026 03:00:23 PM  [INFO   ]  START: Simulación 8 — Servicio con tarifa negativa
+10/05/2026 03:00:23 PM  [WARNING]    Error capturado correctamente: [ERR_SERVICIO_INVALIDO] Parámetros del servicio inválidos (Campo: 'tarifa_hora'): La tarifa no puede ser negativa: -5000
+10/05/2026 03:00:23 PM  [INFO   ]    Bloque finally: intento de registro finalizado.
+
+10/05/2026 03:00:23 PM  [INFO   ]  START: Simulación 9 — Reserva completa exitosa
+10/05/2026 03:00:23 PM  [INFO   ]  FINISH: Reserva creada: RES-0001 | Cliente: Laura Gómez | Servicio: Sala Innovación
+10/05/2026 03:00:23 PM  [INFO   ]  Reserva RES-0001 confirmada para 'Laura Gómez'.
+10/05/2026 03:00:23 PM  [INFO   ]  Reserva RES-0001 en proceso.
+10/05/2026 03:00:23 PM  [INFO   ]  Intento de procesamiento registrado para reserva RES-0001.
+10/05/2026 03:00:23 PM  [INFO   ]  Reserva RES-0001 completada. Costo: $276,000
+10/05/2026 03:00:23 PM  [INFO   ]    Reserva completada: Reserva RES-0001
+  Cliente     : Laura Gómez
+  Servicio    : Sala Innovación
+  Duración    : 3 horas
+  Costo total : $276,000
+  Estado      : Completada
+  Creada      : 10/05/2026 15:00
+
+10/05/2026 03:00:23 PM  [INFO   ]  START: Simulación 10 — Servicio no disponible
+10/05/2026 03:00:23 PM  [WARNING]    Error capturado correctamente: [ERR_SERVICIO_NO_DISPONIBLE] El servicio 'Sala Innovación' no está disponible. Motivo: El servicio no está disponible para reservar.
+10/05/2026 03:00:23 PM  [INFO   ]    Disponibilidad restaurada en bloque finally.
+
+10/05/2026 03:00:23 PM  [INFO   ]  START: Simulación 11 — Duración inválida (0 horas)
+10/05/2026 03:00:23 PM  [WARNING]    Error capturado: [ERR_RESERVA_INVALIDA] Reserva inválida: Error inesperado al crear reserva: [ERR_SERVICIO_INVALIDO] Parámetros del servicio inválidos (Campo: 'duracion_horas'): La duración debe ser mayor a 0 horas, recibido: 0
+
+10/05/2026 03:00:23 PM  [INFO   ]  START: Simulación 12 — Cancelar reserva
+10/05/2026 03:00:23 PM  [INFO   ]  FINISH: Reserva creada: RES-0002 | Cliente: Laura Gómez | Servicio: Laptop Dell XPS
+10/05/2026 03:00:23 PM  [INFO   ]  Reserva RES-0002 cancelada. Motivo: El cliente cambió de planes.
+10/05/2026 03:00:23 PM  [INFO   ]    Estado final: Cancelada
+
+10/05/2026 03:00:23 PM  [INFO   ]  START: Simulación 13 — Costo con IVA
+10/05/2026 03:00:23 PM  [INFO   ]    Sin IVA : $184,000
+10/05/2026 03:00:23 PM  [INFO   ]    Con IVA : $218,960
+
+10/05/2026 03:00:23 PM  [INFO   ]  START: Simulación 14 — Costo con descuento
+10/05/2026 03:00:23 PM  [INFO   ]    Sin descuento: $100,000
+10/05/2026 03:00:23 PM  [INFO   ]    Con 20% desc + IVA: $95,200
+
+10/05/2026 03:00:23 PM  [INFO   ]  START: Simulación 15 — Descuento inválido
+10/05/2026 03:00:23 PM  [WARNING]    Error capturado correctamente: [ERR_DESCUENTO_INVALIDO] El porcentaje de descuento '1.5' no es válido. Debe estar entre 0.0 y 1.0 (0% a 100%).
+
+============================================================
+10/05/2026 03:00:23 PM  [INFO   ]  Results: Total simulaciones ejecutadas : 15
+10/05/2026 03:00:23 PM  [INFO   ]  Results: Exitosas                      : 15
+10/05/2026 03:00:23 PM  [INFO   ]  Results: Con errores controlados       : 0
+============================================================
+
+============================================================
+10/05/2026 03:00:23 PM  [INFO   ]  Sistema finalizado en 0.0943 segundos.
+============================================================
+============================================================
+   SISTEMA: Software FJ — Gestión Integral
+   Clientes, Servicios y Reservas
+============================================================
+10/05/2026 03:03:26 PM  [INFO   ]  Sistema iniciado: 10/05/2026 15:03:26
+
+============================================================
+   INICIO DEL SISTEMA: Software FJ — Simulaciones
+============================================================
+10/05/2026 03:03:26 PM  [INFO   ]  START: Simulación 1 — Registrar cliente válido
+10/05/2026 03:03:26 PM  [INFO   ]  FINISH: Operación --- Registrar cliente: Cliente registrado exitosamente.
+10/05/2026 03:03:26 PM  [INFO   ]    Resultado: Cliente('Laura Gómez', laura.gomez@email.com)
+
+10/05/2026 03:03:26 PM  [INFO   ]  START: Simulación 2 — Cliente con email inválido
+10/05/2026 03:03:26 PM  [WARNING]    Error capturado correctamente: [ERR_CLIENTE_INVALIDO] Datos del cliente inválidos (Campo: 'email'): 'correo-sin-arroba' no tiene formato válido (ej: usuario@dominio.com).
+10/05/2026 03:03:26 PM  [INFO   ]    Bloque finally: validación de email completada.
+
+10/05/2026 03:03:26 PM  [INFO   ]  START: Simulación 3 — Cliente con identificación corta
+10/05/2026 03:03:26 PM  [WARNING]    Error capturado: [ERR_CLIENTE_INVALIDO] Datos del cliente inválidos (Campo: 'identificacion'): '123' debe tener al menos 5 caracteres.
+
+10/05/2026 03:03:26 PM  [INFO   ]  START: Simulación 4 — Cliente duplicado
+10/05/2026 03:03:26 PM  [INFO   ]  FINISH: Operación --- Registrar cliente: Cliente registrado exitosamente.
+10/05/2026 03:03:26 PM  [WARNING]    Duplicado detectado correctamente: [ERR_CLIENTE_DUPLICADO] Ya existe un cliente registrado con la identificación '99887766'.
+
+10/05/2026 03:03:26 PM  [INFO   ]  START: Simulación 5 — Registrar sala válida
+10/05/2026 03:03:26 PM  [INFO   ]  FINISH: Servicio registrado exitosamente: Sala Innovación
+10/05/2026 03:03:26 PM  [INFO   ]    Resultado: [SRV-001] Sala Innovación — $80,000/hora — Disponible
+
+10/05/2026 03:03:26 PM  [INFO   ]  START: Simulación 6 — Registrar equipo válido
+10/05/2026 03:03:26 PM  [INFO   ]  FINISH: Servicio registrado exitosamente: Laptop Dell XPS
+10/05/2026 03:03:26 PM  [INFO   ]    Resultado: [SRV-002] Laptop Dell XPS — $25,000/hora — Disponible
+
+10/05/2026 03:03:26 PM  [INFO   ]  START: Simulación 7 — Registrar asesoría válida
+10/05/2026 03:03:26 PM  [INFO   ]  FINISH: Servicio registrado exitosamente: Consultoría en Ciberseguridad
+10/05/2026 03:03:26 PM  [INFO   ]    Resultado: [SRV-003] Consultoría en Ciberseguridad — $120,000/hora — Disponible
+
+10/05/2026 03:03:26 PM  [INFO   ]  START: Simulación 8 — Servicio con tarifa negativa
+10/05/2026 03:03:26 PM  [WARNING]    Error capturado correctamente: [ERR_SERVICIO_INVALIDO] Parámetros del servicio inválidos (Campo: 'tarifa_hora'): La tarifa no puede ser negativa: -5000
+10/05/2026 03:03:26 PM  [INFO   ]    Bloque finally: intento de registro finalizado.
+
+10/05/2026 03:03:26 PM  [INFO   ]  START: Simulación 9 — Reserva completa exitosa
+10/05/2026 03:03:26 PM  [INFO   ]  FINISH: Reserva creada: RES-0001 | Cliente: Laura Gómez | Servicio: Sala Innovación
+10/05/2026 03:03:26 PM  [INFO   ]  Reserva RES-0001 confirmada para 'Laura Gómez'.
+10/05/2026 03:03:26 PM  [INFO   ]  Reserva RES-0001 en proceso.
+10/05/2026 03:03:26 PM  [INFO   ]  Intento de procesamiento registrado para reserva RES-0001.
+10/05/2026 03:03:26 PM  [INFO   ]  Reserva RES-0001 completada. Costo: $276,000
+10/05/2026 03:03:26 PM  [INFO   ]    Reserva completada: Reserva RES-0001
+  Cliente     : Laura Gómez
+  Servicio    : Sala Innovación
+  Duración    : 3 horas
+  Costo total : $276,000
+  Estado      : Completada
+  Creada      : 10/05/2026 15:03
+
+10/05/2026 03:03:26 PM  [INFO   ]  START: Simulación 10 — Servicio no disponible
+10/05/2026 03:03:26 PM  [WARNING]    Error capturado correctamente: [ERR_SERVICIO_NO_DISPONIBLE] El servicio 'Sala Innovación' no está disponible. Motivo: El servicio no está disponible para reservar.
+10/05/2026 03:03:26 PM  [INFO   ]    Disponibilidad restaurada en bloque finally.
+
+10/05/2026 03:03:26 PM  [INFO   ]  START: Simulación 11 — Duración inválida (0 horas)
+10/05/2026 03:03:26 PM  [WARNING]    Error capturado: [ERR_RESERVA_INVALIDA] Reserva inválida: Error inesperado al crear reserva: [ERR_SERVICIO_INVALIDO] Parámetros del servicio inválidos (Campo: 'duracion_horas'): La duración debe ser mayor a 0 horas, recibido: 0
+
+10/05/2026 03:03:26 PM  [INFO   ]  START: Simulación 12 — Cancelar reserva
+10/05/2026 03:03:26 PM  [INFO   ]  FINISH: Reserva creada: RES-0002 | Cliente: Laura Gómez | Servicio: Laptop Dell XPS
+10/05/2026 03:03:26 PM  [INFO   ]  Reserva RES-0002 cancelada. Motivo: El cliente cambió de planes.
+10/05/2026 03:03:26 PM  [INFO   ]    Estado final: Cancelada
+
+10/05/2026 03:03:26 PM  [INFO   ]  START: Simulación 13 — Costo con IVA
+10/05/2026 03:03:26 PM  [INFO   ]    Sin IVA : $184,000
+10/05/2026 03:03:26 PM  [INFO   ]    Con IVA : $218,960
+
+10/05/2026 03:03:26 PM  [INFO   ]  START: Simulación 14 — Costo con descuento
+10/05/2026 03:03:26 PM  [INFO   ]    Sin descuento: $100,000
+10/05/2026 03:03:26 PM  [INFO   ]    Con 20% desc + IVA: $95,200
+
+10/05/2026 03:03:26 PM  [INFO   ]  START: Simulación 15 — Descuento inválido
+10/05/2026 03:03:26 PM  [WARNING]    Error capturado correctamente: [ERR_DESCUENTO_INVALIDO] El porcentaje de descuento '1.5' no es válido. Debe estar entre 0.0 y 1.0 (0% a 100%).
+
+============================================================
+10/05/2026 03:03:26 PM  [INFO   ]  Results: Total simulaciones ejecutadas : 15
+10/05/2026 03:03:26 PM  [INFO   ]  Results: Exitosas                      : 15
+10/05/2026 03:03:26 PM  [INFO   ]  Results: Con errores controlados       : 0
+============================================================
+
+============================================================
+10/05/2026 03:03:26 PM  [INFO   ]  Sistema finalizado en 0.1156 segundos.
+============================================================
+============================================================
+   SISTEMA: Software FJ — Gestión Integral
+   Clientes, Servicios y Reservas
+============================================================
+10/05/2026 03:06:50 PM  [INFO   ]  Sistema iniciado: 10/05/2026 15:06:50
+
+============================================================
+   INICIO DEL SISTEMA: Software FJ — Simulaciones
+============================================================
+10/05/2026 03:06:51 PM  [INFO   ]  START: Simulación 1 — Registrar cliente válido
+10/05/2026 03:06:51 PM  [INFO   ]  FINISH: Operación --- Registrar cliente: Cliente registrado exitosamente.
+10/05/2026 03:06:51 PM  [INFO   ]    Resultado: Cliente('Laura Gómez', laura.gomez@email.com)
+
+10/05/2026 03:06:51 PM  [INFO   ]  START: Simulación 2 — Cliente con email inválido
+10/05/2026 03:06:51 PM  [WARNING]    Error capturado correctamente: [ERR_CLIENTE_INVALIDO] Datos del cliente inválidos (Campo: 'email'): 'correo-sin-arroba' no tiene formato válido (ej: usuario@dominio.com).
+10/05/2026 03:06:51 PM  [INFO   ]    Bloque finally: validación de email completada.
+
+10/05/2026 03:06:51 PM  [INFO   ]  START: Simulación 3 — Cliente con identificación corta
+10/05/2026 03:06:51 PM  [WARNING]    Error capturado: [ERR_CLIENTE_INVALIDO] Datos del cliente inválidos (Campo: 'identificacion'): '123' debe tener al menos 5 caracteres.
+
+10/05/2026 03:06:51 PM  [INFO   ]  START: Simulación 4 — Cliente duplicado
+10/05/2026 03:06:51 PM  [INFO   ]  FINISH: Operación --- Registrar cliente: Cliente registrado exitosamente.
+10/05/2026 03:06:51 PM  [WARNING]    Duplicado detectado correctamente: [ERR_CLIENTE_DUPLICADO] Ya existe un cliente registrado con la identificación '99887766'.
+
+10/05/2026 03:06:51 PM  [INFO   ]  START: Simulación 5 — Registrar sala válida
+10/05/2026 03:06:51 PM  [INFO   ]  FINISH: Servicio registrado exitosamente: Sala Innovación
+10/05/2026 03:06:51 PM  [INFO   ]    Resultado: [SRV-001] Sala Innovación — $80,000/hora — Disponible
+
+10/05/2026 03:06:51 PM  [INFO   ]  START: Simulación 6 — Registrar equipo válido
+10/05/2026 03:06:51 PM  [INFO   ]  FINISH: Servicio registrado exitosamente: Laptop Dell XPS
+10/05/2026 03:06:51 PM  [INFO   ]    Resultado: [SRV-002] Laptop Dell XPS — $25,000/hora — Disponible
+
+10/05/2026 03:06:51 PM  [INFO   ]  START: Simulación 7 — Registrar asesoría válida
+10/05/2026 03:06:51 PM  [INFO   ]  FINISH: Servicio registrado exitosamente: Consultoría en Ciberseguridad
+10/05/2026 03:06:51 PM  [INFO   ]    Resultado: [SRV-003] Consultoría en Ciberseguridad — $120,000/hora — Disponible
+
+10/05/2026 03:06:51 PM  [INFO   ]  START: Simulación 8 — Servicio con tarifa negativa
+10/05/2026 03:06:51 PM  [WARNING]    Error capturado correctamente: [ERR_SERVICIO_INVALIDO] Parámetros del servicio inválidos (Campo: 'tarifa_hora'): La tarifa no puede ser negativa: -5000
+10/05/2026 03:06:51 PM  [INFO   ]    Bloque finally: intento de registro finalizado.
+
+10/05/2026 03:06:51 PM  [INFO   ]  START: Simulación 9 — Reserva completa exitosa
+10/05/2026 03:06:51 PM  [INFO   ]  FINISH: Reserva creada: RES-0001 | Cliente: Laura Gómez | Servicio: Sala Innovación
+10/05/2026 03:06:51 PM  [INFO   ]  Reserva RES-0001 confirmada para 'Laura Gómez'.
+10/05/2026 03:06:51 PM  [INFO   ]  Reserva RES-0001 en proceso.
+10/05/2026 03:06:51 PM  [INFO   ]  Intento de procesamiento registrado para reserva RES-0001.
+10/05/2026 03:06:51 PM  [INFO   ]  Reserva RES-0001 completada. Costo: $276,000
+10/05/2026 03:06:51 PM  [INFO   ]    Reserva completada: Reserva RES-0001
+  Cliente     : Laura Gómez
+  Servicio    : Sala Innovación
+  Duración    : 3 horas
+  Costo total : $276,000
+  Estado      : Completada
+  Creada      : 10/05/2026 15:06
+
+10/05/2026 03:06:51 PM  [INFO   ]  START: Simulación 10 — Servicio no disponible
+10/05/2026 03:06:51 PM  [WARNING]    Error capturado correctamente: [ERR_SERVICIO_NO_DISPONIBLE] El servicio 'Sala Innovación' no está disponible. Motivo: El servicio no está disponible para reservar.
+10/05/2026 03:06:51 PM  [INFO   ]    Disponibilidad restaurada en bloque finally.
+
+10/05/2026 03:06:51 PM  [INFO   ]  START: Simulación 11 — Duración inválida (0 horas)
+10/05/2026 03:06:51 PM  [WARNING]    Error capturado: [ERR_RESERVA_INVALIDA] Reserva inválida: Error inesperado al crear reserva: [ERR_SERVICIO_INVALIDO] Parámetros del servicio inválidos (Campo: 'duracion_horas'): La duración debe ser mayor a 0 horas, recibido: 0
+
+10/05/2026 03:06:51 PM  [INFO   ]  START: Simulación 12 — Cancelar reserva
+10/05/2026 03:06:51 PM  [INFO   ]  FINISH: Reserva creada: RES-0002 | Cliente: Laura Gómez | Servicio: Laptop Dell XPS
+10/05/2026 03:06:51 PM  [INFO   ]  Reserva RES-0002 cancelada. Motivo: El cliente cambió de planes.
+10/05/2026 03:06:51 PM  [INFO   ]    Estado final: Cancelada
+
+10/05/2026 03:06:51 PM  [INFO   ]  START: Simulación 13 — Costo con IVA
+10/05/2026 03:06:51 PM  [INFO   ]    Sin IVA : $184,000
+10/05/2026 03:06:51 PM  [INFO   ]    Con IVA : $218,960
+
+10/05/2026 03:06:51 PM  [INFO   ]  START: Simulación 14 — Costo con descuento
+10/05/2026 03:06:51 PM  [INFO   ]    Sin descuento: $100,000
+10/05/2026 03:06:51 PM  [INFO   ]    Con 20% desc + IVA: $95,200
+
+10/05/2026 03:06:51 PM  [INFO   ]  START: Simulación 15 — Descuento inválido
+10/05/2026 03:06:51 PM  [WARNING]    Error capturado correctamente: [ERR_DESCUENTO_INVALIDO] El porcentaje de descuento '1.5' no es válido. Debe estar entre 0.0 y 1.0 (0% a 100%).
+
+============================================================
+10/05/2026 03:06:51 PM  [INFO   ]  Results: Total simulaciones ejecutadas : 15
+10/05/2026 03:06:51 PM  [INFO   ]  Results: Exitosas                      : 15
+10/05/2026 03:06:51 PM  [INFO   ]  Results: Con errores controlados       : 0
+============================================================
+
+============================================================
+10/05/2026 03:06:51 PM  [INFO   ]  Sistema finalizado en 0.0904 segundos.
+============================================================
