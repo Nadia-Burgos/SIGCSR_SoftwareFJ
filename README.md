@@ -73,7 +73,7 @@ python main.py
   clientes, servicios y reservas, demostrando que el sistema continúa 
   funcionando aunque encuentre errores en el camino.
 
-🛡️ Jerarquía de excepciones
+## 🛡️ Jerarquía de excepciones
 SoftwareFJException
 ├── ClienteInvalidoException
 ├── ClienteDuplicadoException
@@ -86,7 +86,7 @@ SoftwareFJException
 ├── ReservaDuplicadaException
 └── DescuentoInvalidoException
 
-📚 Referencias
+## 📚 Referencias
 Van Rossum, G. (2024). El tutorial de Python. https://docs.python.org/es/3.12/tutorial/errors.html
 Cuevas Álvarez, A. (2016). Python 3: curso práctico. RA-MA Editorial.
 Romano, F., Baka, B., & Phillips, D. (2019). Getting Started with Python. Packt Publishing.
